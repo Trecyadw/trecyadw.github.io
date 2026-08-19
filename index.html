@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trecya Dewi Kusumaningrum — Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F8F3EA;
+    --paper:#F0E7D6;
+    --ink:#1C1912;
+    --ink-soft:#59534A;
+    --rose:#C97158;
+    --rose-dim:#C9715833;
+    --sage:#818A65;
+    --line:#E1D6C1;
+    --white:#FFFDF8;
+    --maxw:1220px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--rose); color:var(--white);}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 40px;}
+
+  h1,h2,h3{font-family:'Fraunces',serif; font-weight:500; letter-spacing:-0.01em;}
+
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:""; width:16px; height:1px; background:var(--rose); display:inline-block;}
+
+  a:focus-visible, button:focus-visible{outline:2px solid var(--rose); outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- DECORATIVE BROWSER CHROME ---------- */
+  .chrome-bar{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+  }
+  .chrome-inner{
+    max-width:var(--maxw); margin:0 auto; padding:0 40px;
+    display:flex; align-items:center; gap:18px;
+  }
+  .chrome-dots{display:flex; gap:7px; flex-shrink:0;}
+  .chrome-dots span{width:11px; height:11px; border-radius:50%;}
+  .chrome-dots .r{background:#E8927C;} .chrome-dots .y{background:#E3C77E;} .chrome-dots .g{background:#9CAE83;}
+  .chrome-pill{
+    flex:1; max-width:520px;
+    height:26px; border-radius:999px;
+    background:var(--white);
+    border:1px solid var(--line);
+    display:flex; align-items:center;
+    padding:0 16px;
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(248,243,234,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{max-width:var(--maxw); margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
+  .logo{font-family:'Fraunces',serif; font-size:20px; font-weight:600;}
+  .logo span{color:var(--rose); font-style:italic;}
+  .navlinks{display:flex; gap:36px; font-size:13.5px;}
+  .navlinks a{position:relative; padding-bottom:3px;}
+  .navlinks a::after{content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--ink); transition:width .25s ease;}
+  .navlinks a:hover::after{width:100%;}
+  .nav-cta{
+    font-size:13px; padding:10px 20px; border:1px solid var(--ink); border-radius:999px;
+    transition:background .25s ease, color .25s ease; white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--ink); color:var(--ivory);}
+  .menu-btn{display:none; background:none; border:none; font-size:22px; cursor:pointer;}
+  @media (max-width:840px){
+    .navlinks{display:none;} .nav-cta{display:none;} .menu-btn{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:90px 0 90px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-left .name-tag{
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:16px 0 6px;
+  }
+  .hero-left h1{
+    font-size:clamp(30px,3.4vw,44px);
+    line-height:1.16;
+    margin:0 0 26px;
+    max-width:520px;
+  }
+  .hero-left h1 em{font-style:italic; color:var(--rose); font-weight:500;}
+  .hero-sub{max-width:440px; color:var(--ink-soft); font-size:16px; margin-bottom:32px;}
+  .hero-actions{display:flex; align-items:center; gap:26px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--ink); color:var(--ivory); padding:15px 30px; border-radius:999px;
+    font-size:14px; display:inline-flex; align-items:center; gap:10px;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .btn-primary:hover{background:var(--rose); transform:translateY(-2px);}
+  .link-underline{
+    font-size:14px; border-bottom:1px solid var(--ink); padding-bottom:3px; transition:border-color .2s ease, color .2s ease;
+  }
+  .link-underline:hover{color:var(--rose); border-color:var(--rose);}
+
+  .stack-pills{display:flex; flex-wrap:wrap; gap:9px; margin-top:30px;}
+  .pill{
+    font-family:'Space Mono',monospace; font-size:11px; padding:6px 13px;
+    border:1px solid var(--line); border-radius:999px; color:var(--ink-soft); background:var(--white);
+  }
+
+  /* hero visual */
+  .hero-right{position:relative;}
+  .frame{
+    border-radius:14px;
+    background:linear-gradient(155deg,#EFE1CC,#E4CFAE 55%,#D4B98C);
+    aspect-ratio:5/6;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 40px 70px -24px rgba(28,25,18,0.35);
+  }
+  .frame .blob{
+    position:absolute; width:220px; height:220px; border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, #F3E3CF, #D9C39F);
+    top:-8%; right:-10%;
+    opacity:0.9;
+  }
+  .frame .potret{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:center 32%;
+    image-rendering:pixelated;
+  }
+  .frame .scrim{
+    position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(28,25,18,.14) 0%, transparent 45%);
+  }
+  .riset-card{
+    background:var(--white); border:1px solid var(--line); border-radius:12px;
+    padding:20px 22px 22px; max-width:340px; width:100%;
+    box-shadow:0 22px 46px -22px rgba(28,25,18,0.28);
+  }
+  .riset-card .top-row{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:12px;}
+  .riset-card .top-row .badge{
+    font-family:'Space Mono',monospace; font-size:9.5px; letter-spacing:.06em; color:var(--sage);
+    background:#EEF0E5; padding:4px 9px; border-radius:999px; white-space:nowrap;
+  }
+  .riset-card .stars{color:var(--rose); font-size:11px; letter-spacing:2px;}
+  .riset-card h4{font-family:'Fraunces',serif; font-size:15.5px; font-weight:500; margin-bottom:12px;}
+  .riset-card .kaki{
+    margin-top:14px; padding-top:12px; border-top:1px solid var(--line);
+    font-family:'Space Mono',monospace; font-size:10px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--sage);
+  }
+  .head-kanan{display:flex; flex-direction:column; align-items:flex-end; gap:22px; max-width:340px;}
+  @media (max-width:760px){ .head-kanan{align-items:flex-start;} }
+  .bar-row{margin-bottom:10px;}
+  .bar-row .lab{display:flex; justify-content:space-between; font-size:10.5px; margin-bottom:5px; font-family:'Space Mono',monospace; color:var(--ink-soft);}
+  .bar-row .lab b{color:var(--ink); font-family:'Inter',sans-serif; font-weight:600;}
+  .bar-track{height:6px; background:#EFE7D8; border-radius:99px; overflow:hidden;}
+  .bar-fill{height:100%; border-radius:99px; width:0%; transition:width 1.3s cubic-bezier(.2,.8,.2,1);}
+  .bar-fill.rose{background:linear-gradient(90deg,#C97158,#E39679);}
+  .bar-fill.sage{background:linear-gradient(90deg,#818A65,#A3AD84);}
+  .bar-row.in .bar-fill{width:var(--w);}
+
+  /* ---------- KARTU UNDUH CV ---------- */
+  .cv-card{
+    display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+    background:var(--white); border:1px solid var(--line); border-radius:14px;
+    padding:24px 26px; margin-top:44px;
+  }
+  .cv-ikon{
+    flex-shrink:0; width:52px; height:52px; border-radius:12px;
+    background:var(--paper); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; color:var(--rose);
+  }
+  .cv-ikon svg{width:24px; height:24px; stroke:currentColor; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round;}
+  .cv-teks{flex:1; min-width:200px;}
+  .cv-teks b{display:block; font-family:'Fraunces',serif; font-size:18px; font-weight:500; margin-bottom:4px;}
+  .cv-teks span{
+    font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--sage);
+  }
+  .cv-tombol{
+    display:inline-flex; align-items:center; gap:9px; white-space:nowrap;
+    background:var(--ink); color:var(--ivory); font-size:13.5px;
+    padding:13px 24px; border-radius:999px;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .cv-tombol:hover{background:var(--rose); transform:translateY(-2px);}
+  .cv-tombol svg{width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+  @media (max-width:560px){ .cv-tombol{width:100%; justify-content:center;} }
+
+  /* ---------- DATA DIRI ---------- */
+  .datadiri{
+    margin-top:30px; border-top:1px solid var(--line); padding-top:24px;
+    display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 26px;
+  }
+  .dd-item{display:flex; align-items:flex-start; gap:12px;}
+  .dd-ikon{
+    flex-shrink:0; width:34px; height:34px; border-radius:50%;
+    background:var(--white); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; color:var(--rose);
+    transition:background .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .dd-ikon svg{width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round;}
+  a.dd-item:hover .dd-ikon{background:var(--rose); color:var(--white); border-color:var(--rose);}
+  .dd-teks{min-width:0;}
+  .dd-teks span{
+    display:block; font-family:'Space Mono',monospace; font-size:9.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--sage); margin-bottom:3px;
+  }
+  .dd-teks b{
+    display:block; font-weight:500; font-size:14px; color:var(--ink);
+    overflow-wrap:anywhere;
+  }
+  a.dd-item:hover .dd-teks b{color:var(--rose);}
+  @media (max-width:620px){ .datadiri{grid-template-columns:1fr;} }
+
+  /* kontak di footer dengan ikon */
+  .contact-meta a, .contact-meta span{display:inline-flex; align-items:center; gap:9px;}
+  .contact-meta svg{width:15px; height:15px; stroke:var(--rose); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0;}
+  .contact-meta a{transition:color .2s ease;}
+  .contact-meta a:hover{color:var(--rose);}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr; padding-top:60px;}
+    .hero-right{order:-1;}
+    .chrome-pill{display:none;}
+  }
+
+  /* ---------- MARQUEE ---------- */
+  .marquee-band{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:22px 0; overflow:hidden; background:var(--paper);
+  }
+  .marquee-track{
+    display:flex; gap:48px; white-space:nowrap; width:max-content;
+    animation:scroll-left 26s linear infinite;
+    font-family:'Fraunces',serif; font-style:italic; font-size:23px; color:var(--ink-soft);
+  }
+  .marquee-track span{display:flex; align-items:center; gap:48px;}
+  .marquee-track b{color:var(--ink); font-style:normal; font-weight:500;}
+  .marquee-track .sep{color:var(--rose);}
+  @keyframes scroll-left{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:120px 0;}
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:64px;}
+  .section-head h2{font-size:clamp(32px,3.8vw,48px); margin-top:14px;}
+  .section-head p{max-width:340px; color:var(--ink-soft); font-size:14.5px; padding-bottom:6px;}
+  @media (max-width:760px){.section-head{flex-direction:column; align-items:flex-start;}}
+
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- ABOUT ---------- */
+  .about{display:grid; grid-template-columns:0.95fr 1.05fr; gap:70px;}
+  .about-text p{font-size:16.5px; color:var(--ink-soft); margin-bottom:18px; max-width:480px;}
+  .stat-grid{display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); margin-top:36px;}
+  .stat{padding:22px 16px 0 0; border-bottom:1px solid var(--line);}
+  .stat b{font-family:'Fraunces',serif; font-size:36px; font-weight:500; display:block; color:var(--rose);}
+  .stat span{font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.05em; color:var(--ink-soft); text-transform:uppercase;}
+
+  .about-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:30px 28px;}
+  .about-card h3{font-size:18px; margin-bottom:18px;}
+  .org-item{display:flex; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); font-size:14px;}
+  .org-item:last-child{border-bottom:none;}
+  .org-item .dot{width:6px; height:6px; border-radius:50%; background:var(--rose); margin-top:8px; flex-shrink:0;}
+  .org-item b{display:block; color:var(--ink); font-weight:600; margin-bottom:2px; font-family:'Inter',sans-serif;}
+  .org-item span{color:var(--ink-soft); font-size:12.5px;}
+
+  /* ---------- WORK / PROYEK ---------- */
+  .work-list{border-top:1px solid var(--line);}
+  .work-row{
+    border-bottom:1px solid var(--line); padding:32px 4px;
+    display:grid; grid-template-columns:56px 1fr auto auto; align-items:center; gap:22px;
+    transition:padding-left .3s ease;
+  }
+  .work-row:hover{padding-left:16px;}
+  .work-row .idx{font-family:'Space Mono',monospace; font-size:12px; color:var(--ink-soft);}
+  .work-row .info h3{font-size:clamp(20px,2.4vw,28px); font-weight:400; margin-bottom:8px; transition:color .25s ease;}
+  .work-row:hover .info h3{color:var(--rose);}
+  .work-row .info p{color:var(--ink-soft); font-size:13.5px; max-width:560px;}
+  .work-row .tags{font-family:'Space Mono',monospace; font-size:11px; color:var(--sage); white-space:nowrap;}
+  .work-row .go{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    transition:transform .3s ease, background .3s ease; flex-shrink:0;
+  }
+  .work-row:hover .go{background:var(--ink); transform:rotate(45deg);}
+  .work-row .go svg{width:14px; height:14px; stroke:var(--ink);}
+  .work-row:hover .go svg{stroke:var(--ivory);}
+  @media (max-width:660px){
+    .work-row{grid-template-columns:30px 1fr auto; row-gap:8px;}
+    .work-row .tags{display:none;}
+  }
+
+  .note-box{
+    margin-top:26px; font-family:'Space Mono',monospace; font-size:12px; color:var(--ink-soft);
+    border-left:2px solid var(--rose); padding:12px 18px; background:var(--white); border-radius:0 8px 8px 0;
+  }
+  .note-box b{color:var(--rose);}
+
+  /* ---------- SKILLS ---------- */
+  .skill-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .skill-card{background:var(--ivory); padding:44px 32px;}
+  .skill-card .num{font-family:'Space Mono',monospace; font-size:12px; color:var(--rose); margin-bottom:24px; display:block;}
+  .skill-card h3{font-size:21px; font-weight:500; margin-bottom:12px;}
+  .skill-card p{color:var(--ink-soft); font-size:14px;}
+  @media (max-width:820px){.skill-grid{grid-template-columns:1fr;}}
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{position:relative; padding-left:32px; border-left:1px solid var(--line);}
+  .t-item{position:relative; padding-bottom:42px;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{
+    content:""; position:absolute; left:-37px; top:4px; width:11px; height:11px; border-radius:50%;
+    background:var(--ivory); border:2px solid var(--rose);
+  }
+  .t-item .date{font-family:'Space Mono',monospace; font-size:11.5px; color:var(--rose); margin-bottom:6px; display:block;}
+  .t-item h3{font-size:20px; margin-bottom:6px; font-weight:500;}
+  .t-item p{color:var(--ink-soft); font-size:14.5px; max-width:600px;}
+
+  .t-sub{margin-top:36px;}
+  .t-sub summary{
+    cursor:pointer; font-family:'Space Mono',monospace; font-size:12.5px; color:var(--ink-soft);
+    padding:14px 0; border-top:1px solid var(--line); list-style:none; display:flex; align-items:center; gap:8px;
+  }
+  .t-sub summary::-webkit-details-marker{display:none;}
+  .t-sub summary::before{content:"▸"; color:var(--rose); transition:transform .2s ease;}
+  .t-sub[open] summary::before{transform:rotate(90deg);}
+  .t-sub .barista-grid{padding:18px 0 6px; display:grid; grid-template-columns:repeat(2,1fr); gap:16px 30px;}
+  .barista-item h4{font-size:14.5px; font-weight:600; margin-bottom:3px;}
+  .barista-item span{font-family:'Space Mono',monospace; font-size:11px; color:var(--ink-soft);}
+  @media (max-width:600px){.t-sub .barista-grid{grid-template-columns:1fr;}}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer{padding:110px 0 46px; border-top:1px solid var(--line);}
+  .contact-cta h2{font-size:clamp(34px,5.6vw,66px); line-height:1.06; max-width:860px;}
+  .contact-cta a.mail{color:var(--rose); border-bottom:2px solid var(--rose-dim); transition:border-color .25s ease;}
+  .contact-cta a.mail:hover{border-color:var(--rose);}
+  .contact-meta{margin-top:36px; display:flex; gap:34px; flex-wrap:wrap; font-size:14px; color:var(--ink-soft);}
+  .foot-bottom{
+    display:flex; justify-content:space-between; align-items:center; padding-top:30px; margin-top:70px;
+    border-top:1px solid var(--line); font-size:12.5px; color:var(--ink-soft); flex-wrap:wrap; gap:14px;
+  }
+  .foot-links{display:flex; gap:24px;}
+  .foot-links a:hover{color:var(--rose);}
+
+  /* ---------- BARIS PROYEK (link ke halaman detail) ---------- */
+  .work-row{color:inherit;}
+  .work-row .go{background:none;}
+
+  /* ---------- PREVIEW FOTO SAAT KURSOR DIARAHKAN ---------- */
+  .hover-preview{
+    position:fixed; top:0; left:0; z-index:80;
+    width:300px; pointer-events:none;
+    opacity:0; transform:translate3d(-9999px,-9999px,0) scale(.92);
+    transition:opacity .28s ease;
+    display:none;
+  }
+  .hover-preview.on{opacity:1;}
+  .hover-preview .stage{
+    position:relative; aspect-ratio:4/3; overflow:hidden;
+    border-radius:12px; border:1px solid var(--line); background:var(--paper);
+    box-shadow:0 34px 60px -22px rgba(28,25,18,.5);
+    rotate:-2.2deg;
+  }
+  .hover-preview .stage img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:contain;
+    background:var(--paper);
+    opacity:0; transform:scale(1.06);
+    transition:opacity .6s ease, transform 1.4s ease;
+  }
+  .hover-preview .stage img.show{opacity:1; transform:scale(1);}
+  .hover-preview .cap{
+    margin-top:10px; margin-left:6px;
+    font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-soft);
+    display:flex; align-items:center; gap:8px;
+  }
+  .hover-preview .cap i{
+    font-style:normal; color:var(--rose);
+  }
+  @media (hover:hover) and (pointer:fine){
+    .hover-preview{display:block;}
+  }
+
+  /* slider kecil di dalam baris — untuk layar sentuh / layar kecil */
+  .row-slider{
+    display:none; position:relative; margin-top:16px; max-width:420px;
+    aspect-ratio:16/9; overflow:hidden; border-radius:10px;
+    border:1px solid var(--line); background:var(--paper);
+  }
+  .row-slider img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:contain;
+    background:var(--paper);
+    opacity:0; transition:opacity .6s ease;
+  }
+  .row-slider img.show{opacity:1;}
+  @media (hover:none), (max-width:900px){
+    .row-slider{display:block;}
+  }
+</style>
+</head>
+<body>
+
+<div class="chrome-bar">
+  <div class="chrome-inner">
+    <div class="chrome-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+    <div class="chrome-pill">trecyadewi.dev/portofolio</div>
+  </div>
+</div>
+
+<header>
+  <nav>
+    <div class="logo">Trecya<span>.</span></div>
+    <div class="navlinks">
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    <a href="#kontak" class="nav-cta">Hubungi Saya</a>
+    <button class="menu-btn" aria-label="Buka menu">☰</button>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-left">
+      <p class="eyebrow">Portofolio</p>
+      <p class="name-tag">Trecya Dewi Kusumaningrum</p>
+      <h1>Membangun <em>produk digital</em> dari web sampai machine learning.</h1>
+      <p class="hero-sub">Lulusan Informatika Universitas Al Azhar Indonesia — mengerjakan website & mini game sebagai freelancer, dan meneliti pengenalan ucapan Bahasa Indonesia lewat deep learning.</p>
+      <div class="hero-actions">
+        <a href="mailto:trecyadewikusuman@gmail.com" class="btn-primary">Kirim Email
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#proyek" class="link-underline">Lihat Proyek</a>
+        <a href="CV-Trecya-Dewi-Kusumaningrum.pdf" class="link-underline" download>Unduh CV</a>
+      </div>
+      <div class="stack-pills">
+        <span class="pill">Next.js</span>
+        <span class="pill">TypeScript</span>
+        <span class="pill">Node.js</span>
+        <span class="pill">SQL</span>
+        <span class="pill">Python</span>
+        <span class="pill">PyTorch</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="frame">
+        <div class="blob"></div>
+        <img class="potret" src="gambar/trecya-pixel.png" alt="Ilustrasi piksel Trecya sedang bekerja di depan laptop" onerror="this.style.display='none'">
+        <div class="scrim"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-band">
+    <div class="marquee-track" id="marquee">
+      <span><b>Pengembangan Web</b><i class="sep">✺</i><b>Machine Learning</b><i class="sep">✺</i><b>Game Development</b><i class="sep">✺</i><b>UI Design</b><i class="sep">✺</i></span>
+      <span><b>Pengembangan Web</b><i class="sep">✺</i><b>Machine Learning</b><i class="sep">✺</i><b>Game Development</b><i class="sep">✺</i><b>UI Design</b><i class="sep">✺</i></span>
+    </div>
+  </div>
+
+  <!-- TENTANG -->
+  <section id="tentang" class="wrap">
+    <div class="about">
+      <div class="about-text reveal">
+        <p class="eyebrow">Tentang Saya</p>
+        <h2 style="font-size:34px; margin:16px 0 22px;">Belajar sistem lewat data, dan membangunnya lewat kode.</h2>
+        <p>Saya lulusan Program Studi Informatika, Fakultas Sains dan Teknologi, Universitas Al Azhar Indonesia. Selama kuliah, saya mengerjakan proyek website dan mini game untuk klien freelance, sambil mendalami machine learning lewat riset tugas akhir tentang pengenalan ucapan otomatis (ASR) Bahasa Indonesia.</p>
+        <p>Saya juga aktif di organisasi kampus — Himpunan Mahasiswa Informatika (HMIF), Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi (BEM FST), beberapa kepanitiaan acara, serta UKM Tari Saman yang sudah beberapa kali menjadi juara di berbagai kompetisi.</p>
+        <div class="stat-grid">
+          <div class="stat"><b>5</b><span>Proyek Ditampilkan</span></div>
+          <div class="stat"><b>1</b><span>Riset Deep Learning</span></div>
+          <div class="stat"><b>4+</b><span>Tahun Pengalaman Kerja</span></div>
+        </div>
+        <p style="margin-top:14px; font-family:'Space Mono',monospace; font-size:11px; color:var(--sage); letter-spacing:.03em;">🏆 Juara kompetisi Tari Saman bersama UKM kampus</p>
+        <div class="datadiri">
+          <div class="dd-item">
+            <span class="dd-ikon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="dd-teks"><span>Domisili</span><b>Serpong Garden, Kec. Cisauk, Kab. Tangerang</b></span>
+          </div>
+          <a class="dd-item" href="tel:+6285892020662">
+            <span class="dd-ikon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+            <span class="dd-teks"><span>Telepon</span><b>0858-9202-0662</b></span>
+          </a>
+          <a class="dd-item" href="mailto:trecyadewikusuman@gmail.com">
+            <span class="dd-ikon"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg></span>
+            <span class="dd-teks"><span>Email</span><b>trecyadewikusuman@gmail.com</b></span>
+          </a>
+          <a class="dd-item" href="https://instagram.com/trecyadw" target="_blank" rel="noopener">
+            <span class="dd-ikon"><svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+            <span class="dd-teks"><span>Instagram</span><b>@trecyadw</b></span>
+          </a>
+          <a class="dd-item" href="https://www.linkedin.com/in/trecyadewi/" target="_blank" rel="noopener">
+            <span class="dd-ikon"><svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><circle cx="7.6" cy="7.9" r="0.95" fill="currentColor" stroke="none"/><path d="M7.6 10.9V17"/><path d="M11.5 17v-6.1M11.5 13.5c0-1.6 1-2.6 2.4-2.6s2.4 1 2.4 2.6V17"/></svg></span>
+            <span class="dd-teks"><span>LinkedIn</span><b>linkedin.com/in/trecyadewi</b></span>
+          </a>
+        </div>
+      </div>
+      <div class="about-card reveal">
+        <h3>Organisasi & Kegiatan Kampus</h3>
+        <div class="org-item">
+          <span class="dot"></span>
+          <div><b>Himpunan Mahasiswa Informatika (HMIF)</b><span>Anggota aktif, Universitas Al Azhar Indonesia</span></div>
+        </div>
+        <div class="org-item">
+          <span class="dot"></span>
+          <div><b>BEM Fakultas Sains dan Teknologi</b><span>Anggota, Universitas Al Azhar Indonesia</span></div>
+        </div>
+        <div class="org-item">
+          <span class="dot"></span>
+          <div><b>Kepanitiaan Acara Kampus</b><span>Berbagai kegiatan akademik & non-akademik</span></div>
+        </div>
+        <div class="org-item">
+          <span class="dot"></span>
+          <div><b>UKM Tari Saman</b><span>Anggota aktif — kerap menjuarai kompetisi tari</span></div>
+        </div>
+        <div class="org-item">
+          <span class="dot"></span>
+          <div><b>Tugas Akhir — S1 Informatika</b><span>Analisis Komparasi BiGRU & BiLSTM pada CRNN untuk ASR, 2026</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYEK -->
+  <section id="proyek" class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Proyek Pilihan</p>
+        <h2>Yang sudah<br>saya bangun.</h2>
+      </div>
+      <div class="head-kanan">
+        <p>Dari riset akademik sampai proyek pesanan klien — berikut beberapa yang paling mewakili cara saya bekerja.</p>
+        <div class="riset-card">
+          <div class="top-row">
+            <span class="badge">TAHAP 3 · 1.514 SAMPEL</span>
+            <span class="stars">★★★★★</span>
+          </div>
+          <h4>Riset ASR — BiGRU vs BiLSTM</h4>
+          <div class="bar-row" style="--w:73.6%">
+            <div class="lab"><b>BiLSTM</b><span>WER 26.36%</span></div>
+            <div class="bar-track"><div class="bar-fill rose"></div></div>
+          </div>
+          <div class="bar-row" style="--w:71.9%">
+            <div class="lab"><b>BiGRU</b><span>WER 28.13%</span></div>
+            <div class="bar-track"><div class="bar-fill sage"></div></div>
+          </div>
+          <p class="kaki">Makin pendek makin baik · lihat proyek 01</p>
+        </div>
+      </div>
+    </div>
+    <div class="work-list reveal">
+      <a class="work-row" href="proyek.html?id=asr" data-proyek="asr">
+        <span class="idx">01</span>
+        <div class="info">
+          <h3>Riset ASR: BiGRU vs BiLSTM pada CRNN-CTC</h3>
+          <p>Tugas akhir yang membandingkan dua varian layer rekuren dua arah untuk pengenalan ucapan Bahasa Indonesia, dilatih pada 30.256 data dari korpus Mozilla Common Voice. BiLSTM unggul dengan WER 26,36% dan CER 6,59%.</p>
+          <div class="row-slider" data-slider="asr"></div>
+        </div>
+        <span class="tags">Python · PyTorch</span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+      </a>
+      <a class="work-row" href="proyek.html?id=nr-order" data-proyek="nr-order">
+        <span class="idx">02</span>
+        <div class="info">
+          <h3>NR Order System — Marketplace Server Roleplay</h3>
+          <p>Sistem pemesanan barang untuk komunitas di server roleplay GTA V (FiveM): katalog berkategori dengan batas stok, status pesanan yang bisa dipantau anggota, dan panel admin untuk produk, pesanan, serta peran pengguna.</p>
+          <div class="row-slider" data-slider="nr-order"></div>
+        </div>
+        <span class="tags">Next.js · TypeScript · Node.js</span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+      </a>
+      <a class="work-row" href="proyek.html?id=flappy-ayang" data-proyek="flappy-ayang">
+        <span class="idx">03</span>
+        <div class="info">
+          <h3>Flappy Ayang — Mini Game</h3>
+          <p>Mini game satu tombol bergaya piksel: terbang menembus rintangan bernama LDR, Overthink, dan Waktu untuk mengumpulkan 23 hati. Dimainkan langsung dari browser, ponsel maupun komputer.</p>
+          <div class="row-slider" data-slider="flappy-ayang"></div>
+        </div>
+        <span class="tags">Game Design · Canvas</span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+      </a>
+      <a class="work-row" href="proyek.html?id=maze-ayang" data-proyek="maze-ayang">
+        <span class="idx">04</span>
+        <div class="info">
+          <h3>Maze Ayang — Mini Game Labirin</h3>
+          <p>Labirin piksel yang tata letaknya dirancang manual — menyusuri lorong, memungut bunga yang tersebar, sampai bertemu karakter yang menunggu di seberang peta.</p>
+          <div class="row-slider" data-slider="maze-ayang"></div>
+        </div>
+        <span class="tags">Game Design · Level Design</span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+      </a>
+      <a class="work-row" href="proyek.html?id=portofolio" data-proyek="portofolio">
+        <span class="idx">05</span>
+        <div class="info">
+          <h3>Website Portofolio Ini</h3>
+          <p>Halaman yang sedang kamu baca — dibangun sendiri dari nol tanpa framework, dengan isi seluruh proyek terpusat di satu berkas data agar mudah dirawat.</p>
+          <div class="row-slider" data-slider="portofolio"></div>
+        </div>
+        <span class="tags">HTML · CSS · JavaScript</span>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></span>
+      </a>
+    </div>
+    <p class="reveal" style="margin-top:26px; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--sage);">Klik satu baris proyek untuk membuka detailnya</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Kemampuan</p>
+        <h2>Area yang<br>saya kuasai.</h2>
+      </div>
+      <p>Tiga bidang utama yang saling melengkapi dalam cara saya membangun sesuatu.</p>
+    </div>
+    <div class="skill-grid reveal">
+      <div class="skill-card">
+        <span class="num">/ 01</span>
+        <h3>Pengembangan Web</h3>
+        <p>Membangun halaman web dari struktur hingga tampilan akhir, dengan fokus pada kejelasan konten dan kenyamanan pengguna di berbagai ukuran layar.</p>
+      </div>
+      <div class="skill-card">
+        <span class="num">/ 02</span>
+        <h3>Machine Learning</h3>
+        <p>Merancang dan melatih model deep learning end-to-end — dari pra-pemrosesan data audio, arsitektur CRNN, hingga evaluasi dengan metrik WER dan CER.</p>
+      </div>
+      <div class="skill-card">
+        <span class="num">/ 03</span>
+        <h3>Game Development</h3>
+        <p>Mengembangkan mini game sesuai kebutuhan klien, dari ide gameplay, logika interaksi, sampai build yang siap dimainkan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENGALAMAN -->
+  <section id="pengalaman" class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Pengalaman</p>
+        <h2>Perjalanan<br>kerja saya.</h2>
+      </div>
+      <p>Kombinasi pengalaman teknis dan kerja langsung dengan pelanggan.</p>
+    </div>
+    <div class="reveal">
+      <div class="timeline">
+        <div class="t-item">
+          <span class="date">± 5 BULAN</span>
+          <h3>Suksestama</h3>
+          <p>Berkontribusi selama kurang lebih 5 bulan. Tambahkan posisi/jabatan, periode kerja, dan tanggung jawab utamamu di sini agar lebih spesifik.</p>
+        </div>
+        <div class="t-item">
+          <span class="date">2020 — 2023</span>
+          <h3>Barista</h3>
+          <p>Lebih dari 2 tahun bekerja di industri kopi pada beberapa coffee shop di area Tangerang Selatan dan Jakarta Selatan — melayani pelanggan, mengoperasikan kasir dan pembayaran, serta bekerja dalam tim yang cepat dan padat.</p>
+        </div>
+      </div>
+      <details class="t-sub">
+        <summary>Rincian pengalaman barista (4 tempat kerja)</summary>
+        <div class="barista-grid">
+          <div class="barista-item"><h4>Arctic Coffee BSD</h4><span>Desember 2020 – Desember 2021</span></div>
+          <div class="barista-item"><h4>December Coffee, Gading Serpong</h4><span>Februari 2021 – Mei 2021</span></div>
+          <div class="barista-item"><h4>El Primero Coffee, BSD</h4><span>Maret 2022 – September 2022</span></div>
+          <div class="barista-item"><h4>Marila Coffee, Jakarta Selatan</h4><span>Juli 2023 – Oktober 2023</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <footer id="kontak" class="wrap">
+    <div class="contact-cta reveal">
+      <p class="eyebrow">Kontak</p>
+      <h2 style="margin-top:18px;">Terbuka untuk peluang magang<br>atau proyek baru —<br><a class="mail" href="mailto:trecyadewikusuman@gmail.com">trecyadewikusuman@gmail.com</a></h2>
+      <div class="cv-card">
+        <span class="cv-ikon"><svg viewBox="0 0 24 24"><path d="M14 2.5H7.5A2.5 2.5 0 0 0 5 5v14a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 19V7.5Z"/><path d="M14 2.5V7.5H19"/><path d="M8.5 13h7M8.5 17h4.5"/></svg></span>
+        <div class="cv-teks">
+          <b>Curriculum Vitae</b>
+          <span>PDF · 1 halaman · 205 KB</span>
+        </div>
+        <a class="cv-tombol" href="CV-Trecya-Dewi-Kusumaningrum.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3.5v11m0 0 4-4m-4 4-4-4"/><path d="M4 16.5v2A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5v-2"/></svg>Unduh CV</a>
+      </div>
+      <div class="contact-meta">
+        <span><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Serpong Garden, Kec. Cisauk, Kab. Tangerang</span>
+        <a href="tel:+6285892020662"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>0858-9202-0662</a>
+        <a href="https://instagram.com/trecyadw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>@trecyadw</a>
+        <a href="https://www.linkedin.com/in/trecyadewi/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="4.5"/><circle cx="7.6" cy="7.9" r="0.95" fill="currentColor" stroke="none"/><path d="M7.6 10.9V17"/><path d="M11.5 17v-6.1M11.5 13.5c0-1.6 1-2.6 2.4-2.6s2.4 1 2.4 2.6V17"/></svg>linkedin.com/in/trecyadewi</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Trecya Dewi Kusumaningrum.</span>
+      <div class="foot-links">
+      <a href="CV-Trecya-Dewi-Kusumaningrum.pdf" download>Unduh CV</a>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<div class="hover-preview" id="hoverPreview" aria-hidden="true">
+  <div class="stage" id="previewStage"></div>
+  <div class="cap"><i>✺</i><span id="previewCap"></span></div>
+</div>
+
+<script src="data-proyek.js"></script>
+<script>
+  // ---------- POSISI GULIR SAAT HALAMAN DIBUKA ----------
+  // Browser mengingat posisi gulir terakhir dan tanda #proyek yang tertinggal
+  // di alamat. Akibatnya halaman bisa terbuka langsung di tengah, bukan dari atas.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('load', ()=>{
+    if (location.hash){
+      // biarkan lompatannya terjadi (misalnya dari tombol "Kembali ke daftar proyek"),
+      // lalu bersihkan alamatnya supaya kunjungan berikutnya mulai dari atas
+      history.replaceState(null, '', location.pathname + location.search);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.14});
+  revealEls.forEach(el=>io.observe(el));
+
+  const bars = document.querySelectorAll('.bar-row');
+  const barIo = new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), i*180); barIo.unobserve(e.target); }
+    });
+  }, {threshold:0.3});
+  bars.forEach(b=>barIo.observe(b));
+
+  // ---------- PLACEHOLDER SLIDE (dipakai kalau array "foto" masih kosong) ----------
+  function slidePlaceholder(judul, ke, total){
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#EFE1CC"/><stop offset="0.55" stop-color="#E4CFAE"/><stop offset="1" stop-color="#D4B98C"/>
+      </linearGradient></defs>
+      <rect width="800" height="600" fill="url(#g)"/>
+      <circle cx="678" cy="126" r="150" fill="#F3E3CF" opacity="0.55"/>
+      <text x="60" y="300" font-family="Georgia, serif" font-size="42" fill="#1C1912">${judul}</text>
+      <text x="60" y="348" font-family="monospace" font-size="19" letter-spacing="4" fill="#59534A">SLOT FOTO ${ke} / ${total}</text>
+      <text x="60" y="540" font-family="monospace" font-size="15" letter-spacing="2" fill="#C97158">TAMBAHKAN DI data-proyek.js</text>
+    </svg>`;
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  }
+
+  function slideGagal(judul){
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+      <rect width="800" height="600" fill="#F0E7D6"/>
+      <text x="60" y="270" font-family="Georgia, serif" font-size="38" fill="#1C1912">${judul}</text>
+      <text x="60" y="320" font-family="monospace" font-size="17" letter-spacing="2" fill="#C97158">FOTO TIDAK DITEMUKAN</text>
+      <text x="60" y="356" font-family="monospace" font-size="14" fill="#59534A">Pastikan folder "gambar" ada di sebelah file ini</text>
+    </svg>`;
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  }
+  window.fotoGagal = function(img){
+    img.onerror = null;
+    img.src = slideGagal(img.dataset.judul || 'Foto');
+  };
+
+  function ambilFoto(p){
+    if (p.foto && p.foto.length) return p.foto;
+    const judul = (p.judulPendek || p.judul).replace(/[<>&]/g,'');
+    return [1,2,3].map(n => ({ src: slidePlaceholder(judul, n, 3), caption: 'Slot foto ' + n }));
+  }
+
+  const PROYEK = {};
+  (window.DATA_PROYEK || []).forEach(p => PROYEK[p.id] = p);
+
+  // ---------- PREVIEW MENGIKUTI KURSOR + SLIDE OTOMATIS ----------
+  const preview   = document.getElementById('hoverPreview');
+  const stage     = document.getElementById('previewStage');
+  const cap       = document.getElementById('previewCap');
+  const bisaHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  const hematGerak= window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let target = {x:0, y:0}, posisi = {x:0, y:0}, skala = 0.92, aktif = false, timerSlide = null, rafId = null;
+
+  function gambarSlide(p){
+    const fotos = ambilFoto(p);
+    stage.innerHTML = fotos.map((f,i)=>
+      `<img src="${f.src}" alt="Pratinjau ${p.judul}" data-judul="${p.judulPendek || p.judul}" onerror="fotoGagal(this)" class="${i===0?'show':''}">`).join('');
+    cap.textContent = (p.judulPendek || p.judul) + ' — ' + fotos.length + ' foto';
+    let ke = 0;
+    clearInterval(timerSlide);
+    if (fotos.length > 1 && !hematGerak){
+      timerSlide = setInterval(()=>{
+        const imgs = stage.querySelectorAll('img');
+        imgs[ke].classList.remove('show');
+        ke = (ke + 1) % imgs.length;
+        imgs[ke].classList.add('show');
+      }, 1400);
+    }
+  }
+
+  function ikutiKursor(){
+    posisi.x += (target.x - posisi.x) * 0.16;
+    posisi.y += (target.y - posisi.y) * 0.16;
+    skala   += ((aktif ? 1 : 0.92) - skala) * 0.14;
+    preview.style.transform = `translate3d(${posisi.x}px, ${posisi.y}px, 0) scale(${skala})`;
+    rafId = requestAnimationFrame(ikutiKursor);
+  }
+
+  function posisikan(e){
+    const w = preview.offsetWidth || 300;
+    const h = 268;
+    let x = e.clientX + 26;
+    let y = e.clientY - h / 2;
+    if (x + w > window.innerWidth - 16) x = e.clientX - w - 26;
+    y = Math.max(16, Math.min(y, window.innerHeight - h - 16));
+    target.x = x; target.y = y;
+  }
+
+  if (bisaHover){
+    document.querySelectorAll('.work-row[data-proyek]').forEach(row => {
+      row.addEventListener('mouseenter', (e)=>{
+        const p = PROYEK[row.dataset.proyek];
+        if (!p) return;
+        gambarSlide(p);
+        posisikan(e);
+        posisi.x = target.x; posisi.y = target.y;   // muncul langsung di dekat kursor
+        aktif = true;
+        preview.classList.add('on');
+        if (!rafId) ikutiKursor();
+      });
+      row.addEventListener('mousemove', posisikan);
+      row.addEventListener('mouseleave', ()=>{
+        aktif = false;
+        preview.classList.remove('on');
+        clearInterval(timerSlide);
+      });
+    });
+  }
+
+  // ---------- SLIDER DI DALAM BARIS (layar sentuh / layar kecil) ----------
+  document.querySelectorAll('.row-slider[data-slider]').forEach(box => {
+    const p = PROYEK[box.dataset.slider];
+    if (!p) return;
+    const fotos = ambilFoto(p);
+    box.innerHTML = fotos.map((f,i)=>
+      `<img src="${f.src}" alt="Pratinjau ${p.judul}" data-judul="${p.judulPendek || p.judul}" onerror="fotoGagal(this)" class="${i===0?'show':''}" loading="lazy">`).join('');
+    if (fotos.length < 2 || hematGerak) return;
+    let ke = 0, jalan = null;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting && !jalan){
+          jalan = setInterval(()=>{
+            const imgs = box.querySelectorAll('img');
+            imgs[ke].classList.remove('show');
+            ke = (ke + 1) % imgs.length;
+            imgs[ke].classList.add('show');
+          }, 2600);
+        } else if (!en.isIntersecting && jalan){
+          clearInterval(jalan); jalan = null;
+        }
+      });
+    }, {threshold:0.3});
+    io.observe(box);
+  });
+</script>
+</body>
+</html>
