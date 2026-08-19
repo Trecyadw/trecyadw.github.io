@@ -55,8 +55,7 @@ window.DATA_PROYEK = [
     foto: [],
     tautan: [
       { label: "Baca laporan lengkap (PDF)", href: "Laporan-Tugas-Akhir-Trecya-Dewi-Kusumaningrum.pdf" },
-      /* Ganti href di bawah dengan alamat repo riset ASR-mu, lalu hapus "segera: true" */
-      { label: "Repo GitHub", href: "", segera: true },
+      { label: "Repo GitHub", href: "https://github.com/Trecyadw/indonesian-asr-crnn-ctc" },
       { label: "Artikel jurnal", href: "", segera: true }
     ]
   },
