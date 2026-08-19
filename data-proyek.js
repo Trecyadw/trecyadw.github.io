@@ -54,7 +54,9 @@ window.DATA_PROYEK = [
     // Contoh: { src: "gambar/asr-arsitektur.png", caption: "Diagram arsitektur CRNN-CTC" }
     foto: [],
     tautan: [
-      { label: "Laporan lengkap (PDF)", href: "", segera: true },
+      { label: "Baca laporan lengkap (PDF)", href: "Laporan-Tugas-Akhir-Trecya-Dewi-Kusumaningrum.pdf" },
+      /* Ganti href di bawah dengan alamat repo riset ASR-mu, lalu hapus "segera: true" */
+      { label: "Repo GitHub", href: "", segera: true },
       { label: "Artikel jurnal", href: "", segera: true }
     ]
   },
@@ -221,7 +223,7 @@ window.DATA_PROYEK = [
       /* Boleh ditambah tangkapan layar halaman detail proyek kalau ada. */
     ],
     tautan: [
-      { label: "Repo GitHub", href: "", segera: true }
+      { label: "Repo GitHub", href: "https://github.com/Trecyadw/trecyadw.github.io" }
     ]
   }
 ];
