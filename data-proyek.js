@@ -1,22 +1,3 @@
-/* =========================================================================
-   DATA PROYEK — SATU-SATUNYA TEMPAT UNTUK MENGEDIT ISI PROYEK
-   -------------------------------------------------------------------------
-   File ini dipakai oleh dua halaman sekaligus:
-     • index.html   → preview foto yang muncul saat kursor diarahkan ke proyek
-     • proyek.html  → halaman detail per proyek (proyek.html?id=asr, dst.)
-
-   CARA MENAMBAHKAN FOTO:
-     1. Simpan foto/screenshot di folder "gambar" (folder ini sudah ada).
-     2. Ukuran ideal: JPG atau PNG, lebar ± 1600px.
-     3. Tulis nama filenya di array "foto" di bawah, contoh:
-          foto: [
-            { src: "gambar/asr-1.png", caption: "Kurva loss pelatihan" },
-            { src: "gambar/asr-2.png", caption: "Contoh hasil transkripsi" }
-          ]
-     Selama array "foto" masih kosong, halaman otomatis menampilkan slide
-     placeholder supaya animasi slide-nya tetap kelihatan.
-   ========================================================================= */
-
 window.DATA_PROYEK = [
   {
     id: "asr",
