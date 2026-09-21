@@ -206,4 +206,51 @@ window.DATA_PROYEK = [
       { label: "Repo GitHub", href: "https://github.com/Trecyadw/trecyadw.github.io" }
     ]
   }
+  ,
+
+  {
+    id: "bipo",
+    nomor: "06",
+    kategori: "Proyek Personal",
+    judul: "Bipo — Widget Desktop Robot Piksel",
+    judulPendek: "Bipo",
+    tagline: "Robot piksel kecil di pojok layar yang ekspresinya berubah mengikuti cuaca dan baterai laptop.",
+    ringkas: "Widget desktop seukuran kartu nama berisi robot piksel yang ekspresinya mengikuti cuaca setempat dan kondisi baterai laptop, lengkap dengan jam dan tanggal.",
+    tagsRingkas: "Tauri · Rust · JavaScript",
+    tags: ["Tauri", "Rust", "JavaScript", "HTML5 Canvas", "Pixel Art", "Open-Meteo API", "Battery Status API"],
+    meta: [
+      { label: "Tahun", value: "2026" },
+      { label: "Peran", value: "Konsep, desain visual, &amp; pengembangan" },
+      { label: "Konteks", value: "Proyek pribadi — widget desktop Windows" }
+    ],
+    deskripsi: [
+      "Bipo adalah widget desktop seukuran kartu nama yang menempel di pojok kanan bawah layar. Isinya robot piksel kecil berwajah layar yang ekspresinya berubah mengikuti cuaca di luar dan kondisi baterai laptop, jadi dua informasi itu bisa terbaca sekilas tanpa membuka aplikasi lain. Di sebelahnya ada jam, tanggal, dan satu kalimat status singkat.",
+      "Widget ini dibangun dengan Tauri: tampilannya ditulis dengan HTML, CSS, dan JavaScript, sementara jendelanya diatur dari Rust — tanpa bingkai bawaan, selalu berada di atas jendela lain, tidak menambah ikon di taskbar, dan otomatis diposisikan di atas taskbar saat dibuka. Robot beserta latarnya digambar piksel demi piksel di Canvas, bukan dari file gambar.",
+      "Data cuaca diambil dari Open-Meteo setiap 10 menit. Karena data itu berupa prakiraan model, kode gerimis kadang muncul padahal di lapangan hanya mendung. Untuk mengatasinya, Bipo baru menampilkan hujan kalau curah hujannya benar-benar tercatat, sehingga statusnya tidak mudah keliru."
+    ],
+    sorotan: [
+      "Delapan ekspresi wajah — dari senang, datar, sedih, dan kaget sampai mengantuk — dipilih otomatis dari cuaca dan baterai",
+      "Urutan prioritas yang jelas: sedang dicas → baterai lemah (20% ke bawah) → cuaca, supaya peringatan penting tidak tertutup info lain",
+      "Lima kondisi cuaca dengan latar animasi sendiri: cerah, berawan, hujan dengan payung, badai dengan kilat, dan malam berbintang",
+      "Meter baterai di dada dan lampu antena berganti warna hijau, kuning, atau merah sesuai level baterai",
+      "Jendela tanpa bingkai yang bisa digeser dan selalu berada di atas jendela lain",
+      "Menghormati setelan prefers-reduced-motion: animasi hujan dan gerak robot dihentikan",
+      "Shortcut keyboard untuk menguji semua ekspresi tanpa perlu menunggu cuaca atau baterai berubah"
+    ],
+    angka: [
+      { nilai: "8", label: "Ekspresi wajah", nota: "dipilih otomatis" },
+      { nilai: "5", label: "Kondisi cuaca", nota: "cerah, berawan, hujan, badai, malam" },
+      { nilai: "340×200", label: "Ukuran widget", nota: "piksel, seukuran kartu nama" },
+      { nilai: "10 mnt", label: "Pembaruan cuaca", nota: "dari Open-Meteo" }
+    ],
+    foto: [
+      { src: "gambar/bipo-1-cerah.png", caption: "Cuaca cerah — robot tersenyum dan meter baterai hijau" },
+      { src: "gambar/bipo-2-hujan.png", caption: "Hujan — robot memegang payung di tengah rintik hujan" },
+      { src: "gambar/bipo-3-lowbat.png", caption: "Baterai lemah — robot mengantuk dan meter berubah merah" },
+      { src: "gambar/bipo-4-malam.png", caption: "Malam hari — langit berbintang dan pengingat untuk istirahat" }
+    ],
+    tautan: [
+      { label: "Repo GitHub", href: "", segera: true }
+    ]
+  }
 ];
