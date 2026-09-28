@@ -33,7 +33,10 @@ window.DATA_PROYEK = [
       { nilai: "30.256", label: "Data latih", nota: "Mozilla Common Voice" }
     ],
     // Contoh: { src: "gambar/asr-arsitektur.png", caption: "Diagram arsitektur CRNN-CTC" }
-    foto: [],
+    foto: [ 
+      { src: "gambar/TABLE_TES_MODEL.png", caption: "Diagram tes model },
+      { src: "gambar/TABEL_AKURASI.png", caption: "Tabel akurasi 3 tahap" },
+      { src: "gambar/DIAGRAM_3_TAHAP.png", caption: "Diagram perbandingan WER dan CER 3 Tahap" },],
     tautan: [
       { label: "Baca laporan lengkap (PDF)", href: "Laporan-Tugas-Akhir-Trecya-Dewi-Kusumaningrum.pdf" },
       { label: "Repo GitHub", href: "https://github.com/Trecyadw/indonesian-asr-crnn-ctc" },
