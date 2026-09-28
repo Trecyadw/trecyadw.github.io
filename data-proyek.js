@@ -10,12 +10,12 @@ window.DATA_PROYEK = [
     tagsRingkas: "Python · PyTorch",
     tags: ["Python", "PyTorch", "Deep Learning", "CRNN", "CTC Loss", "Mel-Spectrogram"],
     meta: [
-      { label: "Tahun", value: "2025 — 2026" },
+      { label: "Tahun", value: "2025 - 2026" },
       { label: "Peran", value: "Peneliti tunggal" },
       { label: "Konteks", value: "Tugas Akhir S1 Informatika, Universitas Al Azhar Indonesia" }
     ],
     deskripsi: [
-      "Riset ini membandingkan kinerja dua varian layer rekuren dua arah — BiGRU dan BiLSTM — di dalam arsitektur hibrida Convolutional Recurrent Neural Network (CRNN) untuk pengenalan ucapan otomatis Bahasa Indonesia. Sinyal audio diubah menjadi Mel-Spectrogram, lalu dilatih end-to-end memakai fungsi kerugian Connectionist Temporal Classification (CTC) sehingga model bisa belajar tanpa penyelarasan manual antara audio dan teks.",
+      "Riset ini membandingkan kinerja dua varian layer rekuren dua arah - BiGRU dan BiLSTM - di dalam arsitektur hibrida Convolutional Recurrent Neural Network (CRNN) untuk pengenalan ucapan otomatis Bahasa Indonesia. Sinyal audio diubah menjadi Mel-Spectrogram, lalu dilatih end-to-end memakai fungsi kerugian Connectionist Temporal Classification (CTC) sehingga model bisa belajar tanpa penyelarasan manual antara audio dan teks.",
       "Data berasal dari korpus publik Mozilla Common Voice Bahasa Indonesia. Eksperimen dijalankan bertahap agar setiap perubahan bisa diukur pengaruhnya secara terpisah: mulai dari baseline, lalu penambahan regularisasi dan augmentasi, hingga perluasan jumlah data latih."
     ],
     sorotan: [
@@ -23,7 +23,7 @@ window.DATA_PROYEK = [
       "Evaluasi memakai dua metrik standar ASR: Word Error Rate (WER) dan Character Error Rate (CER)",
       "Pengujian ulang dengan tiga seed acak (7, 42, 2025) untuk memastikan hasil bukan kebetulan",
       "Selisih WER antar kedua model terbukti signifikan secara statistik lewat uji paired bootstrap",
-      "Perluasan dataset menjadi faktor paling dominan terhadap akurasi — lebih besar pengaruhnya dibanding pemilihan jenis layer",
+      "Perluasan dataset menjadi faktor paling dominan terhadap akurasi - lebih besar pengaruhnya dibanding pemilihan jenis layer",
       "BiGRU melatih sekitar 11% lebih cepat, jadi tetap relevan saat waktu komputasi jadi pertimbangan"
     ],
     angka: [
@@ -55,19 +55,19 @@ window.DATA_PROYEK = [
     tagsRingkas: "Next.js · TypeScript · Node.js",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "SQL", "Autentikasi", "Panel Admin"],
     meta: [
-      { label: "Tahun", value: "2025 — 2026" },
+      { label: "Tahun", value: "2025 - 2026" },
       { label: "Peran", value: "Desain &amp; pengembangan (full-stack)" },
-      { label: "Konteks", value: "Pesanan klien — server roleplay GTA V (FiveM), Night Runner Car Club" }
+      { label: "Konteks", value: "Pesanan klien - server roleplay GTA V (FiveM), Night Runner Car Club" }
     ],
     deskripsi: [
       "NR Order System adalah sistem pemesanan barang untuk Night Runner Car Club, sebuah komunitas di server roleplay GTA V (FiveM). Sebelumnya pesanan anggota dicatat manual dan berserakan di chat, sehingga admin sulit tahu siapa memesan apa dan mana yang sudah dikerjakan. Sistem ini memindahkan alur itu ke web: anggota mendaftar, memilih barang dari katalog, dan memantau sendiri status pesanannya.",
       "Aturan main komunitas ikut dikodekan ke dalam sistem, bukan ditulis sebagai catatan yang mudah diabaikan: harga sudah termasuk pajak 30%, tiap pesanan membutuhkan 200 Metal Scrap, dan setiap barang punya batas jumlah pesanan sendiri. Pembayaran tetap diselesaikan di dalam game, jadi tugas web ini adalah mencatat pesanan dan menjaga statusnya tetap jelas untuk kedua pihak.",
-      "Proyeknya disusun dalam tiga bagian terpisah — client, server, dan database — supaya tiap bagian bisa dikembangkan tanpa mengganggu yang lain. Sisi tampilan memakai Next.js dengan TypeScript dan Tailwind CSS, sisi belakang memakai Node.js dengan basis data SQL."
+      "Proyeknya disusun dalam tiga bagian terpisah - client, server, dan database - supaya tiap bagian bisa dikembangkan tanpa mengganggu yang lain. Sisi tampilan memakai Next.js dengan TypeScript dan Tailwind CSS, sisi belakang memakai Node.js dengan basis data SQL."
     ],
     sorotan: [
       "Tiga peran pengguna dengan hak akses berbeda: member, staff, dan admin",
       "Katalog produk berkategori (senjata, amunisi, rompi, perlengkapan) lengkap dengan stok dan batas maksimum pesanan per barang",
-      "Status pesanan bertingkat — pending, processed, completed — yang bisa dipantau anggota tanpa perlu bertanya ke admin",
+      "Status pesanan bertingkat - pending, processed, completed - yang bisa dipantau anggota tanpa perlu bertanya ke admin",
       "Panel admin untuk menambah, mengubah, menonaktifkan, dan me-restock produk tanpa menyentuh basis data",
       "Rekap admin per pengguna: jumlah pesanan, jumlah item, total belanja, dan berapa yang masih tertahan di tiap status",
       "Manajemen akun: ubah peran pengguna dan nonaktifkan akun, dengan pencarian berdasarkan username, nama IC, atau peran",
@@ -80,10 +80,10 @@ window.DATA_PROYEK = [
       { nilai: "30%", label: "Pajak", nota: "otomatis menyatu di harga" }
     ],
     foto: [
-      { src: "gambar/nr-order-1-beranda.jpg", caption: "Halaman depan — alur pemesanan dalam empat langkah" },
+      { src: "gambar/nr-order-1-beranda.jpg", caption: "Halaman depan - alur pemesanan dalam empat langkah" },
       { src: "gambar/nr-order-2-signin.jpg", caption: "Halaman masuk anggota" },
       { src: "gambar/nr-order-3-produk.jpg", caption: "Katalog produk dengan stok dan batas pesanan" },
-      { src: "gambar/nr-order-4-admin-produk.jpg", caption: "Panel admin — tambah produk dan kelola stok" },
+      { src: "gambar/nr-order-4-admin-produk.jpg", caption: "Panel admin - tambah produk dan kelola stok" },
       { src: "gambar/nr-order-5-admin-orders.jpg", caption: "Rekap pesanan admin per pengguna" },
       { src: "gambar/nr-order-6-admin-users.jpg", caption: "Manajemen akun dan peran pengguna" }
     ],
@@ -97,7 +97,7 @@ window.DATA_PROYEK = [
     id: "flappy-ayang",
     nomor: "03",
     kategori: "Proyek Freelance",
-    judul: "Flappy Ayang — Mini Game",
+    judul: "Flappy Ayang - Mini Game",
     judulPendek: "Flappy Ayang",
     tagline: "Game terbang bergaya piksel yang rintangannya diberi nama masalah hubungan jarak jauh.",
     ringkas: "Mini game bergaya piksel dengan satu tombol: terbang menembus rintangan bernama LDR, Overthink, dan Waktu untuk mengumpulkan 23 hati.",
@@ -109,12 +109,12 @@ window.DATA_PROYEK = [
       { label: "Konteks", value: "Mini game pesanan klien" }
     ],
     deskripsi: [
-      "Flappy Ayang adalah mini game satu tombol bergaya piksel yang dimainkan langsung dari browser. Pemain menerbangkan karakter melewati celah antar rintangan, dan tiap rintangan sengaja diberi nama masalah yang khas hubungan jarak jauh — LDR, Overthink, dan Waktu — sehingga tema ceritanya terbaca langsung dari papan permainannya sendiri, tanpa perlu teks pengantar.",
+      "Flappy Ayang adalah mini game satu tombol bergaya piksel yang dimainkan langsung dari browser. Pemain menerbangkan karakter melewati celah antar rintangan, dan tiap rintangan sengaja diberi nama masalah yang khas hubungan jarak jauh - LDR, Overthink, dan Waktu - sehingga tema ceritanya terbaca langsung dari papan permainannya sendiri, tanpa perlu teks pengantar.",
       "Tujuan permainan bukan skor tak terbatas, melainkan mengumpulkan 23 hati. Angka itu membuat permainan punya garis akhir yang jelas, jadi pemain tahu kapan ia menang. Kontrolnya disamakan untuk semua perangkat: ketuk layar di ponsel, tombol spasi atau panah atas di komputer."
     ],
     sorotan: [
       "Tiga keadaan layar yang dirancang terpisah: layar mulai, permainan berjalan, dan layar gagal dengan tombol coba lagi",
-      "Rintangan diberi label LDR, Overthink, dan Waktu — tema cerita disampaikan lewat elemen permainan, bukan lewat teks",
+      "Rintangan diberi label LDR, Overthink, dan Waktu - tema cerita disampaikan lewat elemen permainan, bukan lewat teks",
       "Target 23 hati sebagai garis akhir, ditampilkan terus di pojok kiri atas",
       "Satu kontrol untuk semua perangkat: ketuk layar, spasi, atau panah atas",
       "Musik lofi latar dengan tombol jeda supaya pemain bisa mematikannya kapan saja",
@@ -122,8 +122,8 @@ window.DATA_PROYEK = [
     ],
     angka: [],
     foto: [
-      { src: "gambar/flappy-ayang-1-mulai.png", caption: "Layar mulai — aturan main dan tombol Mulai Terbang" },
-      { src: "gambar/flappy-ayang-2-main.png", caption: "Permainan berjalan — rintangan Overthink dan hati yang harus diambil" },
+      { src: "gambar/flappy-ayang-1-mulai.png", caption: "Layar mulai - aturan main dan tombol Mulai Terbang" },
+      { src: "gambar/flappy-ayang-2-main.png", caption: "Permainan berjalan - rintangan Overthink dan hati yang harus diambil" },
       { src: "gambar/flappy-ayang-3-gameover.png", caption: "Layar gagal dengan tombol coba lagi" }
     ],
     tautan: [
@@ -135,10 +135,10 @@ window.DATA_PROYEK = [
     id: "maze-ayang",
     nomor: "04",
     kategori: "Proyek Freelance",
-    judul: "Maze Ayang — Mini Game Labirin",
+    judul: "Maze Ayang - Mini Game Labirin",
     judulPendek: "Maze Ayang",
     tagline: "Labirin piksel serba merah muda: menyusuri jalan, memungut bunga, sampai bertemu di ujung.",
-    ringkas: "Mini game labirin bergaya piksel — pemain menyusuri lorong, mengumpulkan bunga yang tersebar, dan berjalan menuju karakter yang menunggu di seberang.",
+    ringkas: "Mini game labirin bergaya piksel - pemain menyusuri lorong, mengumpulkan bunga yang tersebar, dan berjalan menuju karakter yang menunggu di seberang.",
     tagsRingkas: "Game Design · Level Design",
     tags: ["Game Design", "Level Design", "HTML5 Canvas", "JavaScript", "Pixel Art", "Kontrol WASD"],
     meta: [
@@ -154,7 +154,7 @@ window.DATA_PROYEK = [
       "Tata letak labirin dirancang manual supaya jalan buntu dan jalan memutar terasa disengaja",
       "Bunga tersebar sebagai alasan untuk menjelajah, bukan sekadar menuju garis akhir",
       "Satu palet merah muda dipakai konsisten dari dinding, bingkai, sampai latar halaman",
-      "Digerakkan dengan tombol W, A, S, D — satu tekan, satu langkah",
+      "Digerakkan dengan tombol W, A, S, D - satu tekan, satu langkah",
       "Musik lofi latar dengan tombol jeda di atas papan permainan"
       /* Opsional: kalau ada lebih dari satu level, tulis jumlahnya di sini. */
     ],
@@ -175,7 +175,7 @@ window.DATA_PROYEK = [
     kategori: "Proyek Personal",
     judul: "Website Portofolio Ini",
     judulPendek: "Website Portofolio",
-    tagline: "Dibangun sendiri dari nol tanpa framework — termasuk halaman yang sedang kamu baca ini.",
+    tagline: "Dibangun sendiri dari nol tanpa framework - termasuk halaman yang sedang kamu baca ini.",
     ringkas: "Website portofolio yang sedang kamu buka: dibangun dari nol tanpa framework, dengan isi seluruh proyek terpusat di satu berkas data.",
     tagsRingkas: "HTML · CSS · JavaScript",
     tags: ["HTML", "CSS", "JavaScript", "Tanpa Framework", "Desain Responsif", "Aksesibilitas"],
@@ -185,16 +185,16 @@ window.DATA_PROYEK = [
       { label: "Konteks", value: "Proyek pribadi" }
     ],
     deskripsi: [
-      "Website ini saya rancang dan bangun sendiri dari nol, tanpa memakai framework atau templat jadi — hanya HTML, CSS, dan JavaScript langsung. Pilihan itu disengaja: untuk situs sekecil ini, framework justru menambah berat muat tanpa memberi keuntungan berarti, dan tanpa lapisan itu saya bisa mengatur sendiri tiap detail tampilannya.",
-      "Susunannya dibuat supaya mudah dirawat. Seluruh isi proyek — judul, deskripsi, sorotan, foto, dan tautan — terkumpul di satu berkas data. Menambah proyek baru cukup menulis satu entri di sana, dan halaman detailnya langsung ada tanpa perlu membuat file HTML baru, karena satu halaman template melayani semua proyek lewat parameter di alamat."
+      "Website ini saya rancang dan bangun sendiri dari nol, tanpa memakai framework atau templat jadi - hanya HTML, CSS, dan JavaScript langsung. Pilihan itu disengaja: untuk situs sekecil ini, framework justru menambah berat muat tanpa memberi keuntungan berarti, dan tanpa lapisan itu saya bisa mengatur sendiri tiap detail tampilannya.",
+      "Susunannya dibuat supaya mudah dirawat. Seluruh isi proyek - judul, deskripsi, sorotan, foto, dan tautan - terkumpul di satu berkas data. Menambah proyek baru cukup menulis satu entri di sana, dan halaman detailnya langsung ada tanpa perlu membuat file HTML baru, karena satu halaman template melayani semua proyek lewat parameter di alamat."
     ],
     sorotan: [
-      "Dibangun tanpa framework — HTML, CSS, dan JavaScript langsung, tanpa proses build",
+      "Dibangun tanpa framework - HTML, CSS, dan JavaScript langsung, tanpa proses build",
       "Isi seluruh proyek terpusat di satu berkas data; satu halaman template melayani semua halaman detail",
       "Pratinjau foto mengikuti gerak kursor dan berganti sendiri saat baris proyek disentuh kursor",
-      "Di layar sentuh, pratinjau itu otomatis berganti jadi slider di dalam baris — bukan fitur yang mati begitu saja",
+      "Di layar sentuh, pratinjau itu otomatis berganti jadi slider di dalam baris - bukan fitur yang mati begitu saja",
       "Menghormati setelan prefers-reduced-motion: animasi dimatikan bagi pengguna yang menyetelnya",
-      "Gambar dipilih formatnya per kebutuhan — JPEG untuk tangkapan layar bergradasi gelap, PNG palet untuk ilustrasi piksel",
+      "Gambar dipilih formatnya per kebutuhan - JPEG untuk tangkapan layar bergradasi gelap, PNG palet untuk ilustrasi piksel",
       "Alamat yang salah tidak jadi jalan buntu: halaman menampilkan daftar proyek yang tersedia"
     ],
     angka: [],
@@ -215,7 +215,7 @@ window.DATA_PROYEK = [
     id: "bipo",
     nomor: "06",
     kategori: "Proyek Personal",
-    judul: "Bipo — Widget Desktop Robot Piksel",
+    judul: "Bipo - Widget Desktop Robot Piksel",
     judulPendek: "Bipo",
     tagline: "Robot piksel kecil di pojok layar yang ekspresinya berubah mengikuti cuaca dan baterai laptop.",
     ringkas: "Widget desktop seukuran kartu nama berisi robot piksel yang ekspresinya mengikuti cuaca setempat dan kondisi baterai laptop, lengkap dengan jam dan tanggal.",
@@ -224,15 +224,15 @@ window.DATA_PROYEK = [
     meta: [
       { label: "Tahun", value: "2026" },
       { label: "Peran", value: "Konsep, desain visual, &amp; pengembangan" },
-      { label: "Konteks", value: "Proyek pribadi — widget desktop Windows" }
+      { label: "Konteks", value: "Proyek pribadi - widget desktop Windows" }
     ],
     deskripsi: [
       "Bipo adalah widget desktop seukuran kartu nama yang menempel di pojok kanan bawah layar. Isinya robot piksel kecil berwajah layar yang ekspresinya berubah mengikuti cuaca di luar dan kondisi baterai laptop, jadi dua informasi itu bisa terbaca sekilas tanpa membuka aplikasi lain. Di sebelahnya ada jam, tanggal, dan satu kalimat status singkat.",
-      "Widget ini dibangun dengan Tauri: tampilannya ditulis dengan HTML, CSS, dan JavaScript, sementara jendelanya diatur dari Rust — tanpa bingkai bawaan, selalu berada di atas jendela lain, tidak menambah ikon di taskbar, dan otomatis diposisikan di atas taskbar saat dibuka. Robot beserta latarnya digambar piksel demi piksel di Canvas, bukan dari file gambar.",
+      "Widget ini dibangun dengan Tauri: tampilannya ditulis dengan HTML, CSS, dan JavaScript, sementara jendelanya diatur dari Rust - tanpa bingkai bawaan, selalu berada di atas jendela lain, tidak menambah ikon di taskbar, dan otomatis diposisikan di atas taskbar saat dibuka. Robot beserta latarnya digambar piksel demi piksel di Canvas, bukan dari file gambar.",
       "Data cuaca diambil dari Open-Meteo setiap 10 menit. Karena data itu berupa prakiraan model, kode gerimis kadang muncul padahal di lapangan hanya mendung. Untuk mengatasinya, Bipo baru menampilkan hujan kalau curah hujannya benar-benar tercatat, sehingga statusnya tidak mudah keliru."
     ],
     sorotan: [
-      "Delapan ekspresi wajah — dari senang, datar, sedih, dan kaget sampai mengantuk — dipilih otomatis dari cuaca dan baterai",
+      "Delapan ekspresi wajah - dari senang, datar, sedih, dan kaget sampai mengantuk - dipilih otomatis dari cuaca dan baterai",
       "Urutan prioritas yang jelas: sedang dicas → baterai lemah (20% ke bawah) → cuaca, supaya peringatan penting tidak tertutup info lain",
       "Lima kondisi cuaca dengan latar animasi sendiri: cerah, berawan, hujan dengan payung, badai dengan kilat, dan malam berbintang",
       "Meter baterai di dada dan lampu antena berganti warna hijau, kuning, atau merah sesuai level baterai",
@@ -247,10 +247,10 @@ window.DATA_PROYEK = [
       { nilai: "10 mnt", label: "Pembaruan cuaca", nota: "dari Open-Meteo" }
     ],
     foto: [
-      { src: "gambar/bipo-1-dicas.png", caption: "Sedang dicas — mata berbentuk bintang dan meter baterai terisi" },
-      { src: "gambar/bipo-2-hujan.png", caption: "Hujan — robot memegang payung di tengah rintik hujan" },
-      { src: "gambar/bipo-3-badai.png", caption: "Badai — ekspresi kaget dan pesan untuk tetap di dalam" },
-      { src: "gambar/bipo-4-malam.png", caption: "Malam hari — langit berbintang dan pengingat untuk istirahat" }
+      { src: "gambar/bipo-1-dicas.png", caption: "Sedang dicas - mata berbentuk bintang dan meter baterai terisi" },
+      { src: "gambar/bipo-2-hujan.png", caption: "Hujan - robot memegang payung di tengah rintik hujan" },
+      { src: "gambar/bipo-3-badai.png", caption: "Badai - ekspresi kaget dan pesan untuk tetap di dalam" },
+      { src: "gambar/bipo-4-malam.png", caption: "Malam hari - langit berbintang dan pengingat untuk istirahat" }
     ],
     tautan: [
       { label: "Repo GitHub", href: "", segera: true }
