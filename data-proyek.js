@@ -244,9 +244,9 @@ window.DATA_PROYEK = [
       { nilai: "10 mnt", label: "Pembaruan cuaca", nota: "dari Open-Meteo" }
     ],
     foto: [
-      { src: "gambar/bipo-1-cerah.png", caption: "Cuaca cerah — robot tersenyum dan meter baterai hijau" },
+      { src: "gambar/bipo-1-dicas.png", caption: "Sedang dicas — mata berbentuk bintang dan meter baterai terisi" },
       { src: "gambar/bipo-2-hujan.png", caption: "Hujan — robot memegang payung di tengah rintik hujan" },
-      { src: "gambar/bipo-3-lowbat.png", caption: "Baterai lemah — robot mengantuk dan meter berubah merah" },
+      { src: "gambar/bipo-3-badai.png", caption: "Badai — ekspresi kaget dan pesan untuk tetap di dalam" },
       { src: "gambar/bipo-4-malam.png", caption: "Malam hari — langit berbintang dan pengingat untuk istirahat" }
     ],
     tautan: [
