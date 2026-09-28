@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Detail Proyek — Trecya Dewi Kusumaningrum</title>
+<title>Detail Proyek - Trecya Dewi Kusumaningrum</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -256,7 +256,7 @@
 <footer class="wrap">
   <div class="contact-cta">
     <p class="eyebrow">Kontak</p>
-    <h2>Terbuka untuk peluang magang<br>atau proyek baru —<br><a class="mail" href="mailto:trecyadewikusuman@gmail.com">trecyadewikusuman@gmail.com</a></h2>
+    <h2>Terbuka untuk peluang magang<br>atau proyek baru -<br><a class="mail" href="mailto:trecyadewikusuman@gmail.com">trecyadewikusuman@gmail.com</a></h2>
     <div class="contact-meta">
       <span><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Serpong Garden, Kec. Cisauk, Kab. Tangerang</span>
       <a href="tel:+6285892020662"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>0858-9202-0662</a>
@@ -328,18 +328,18 @@
   function ambilFoto(p){
     if (p.foto && p.foto.length) return p.foto;
     const judul = (p.judulPendek || p.judul).replace(/[<>&]/g,'');
-    return [1,2,3].map(n => ({ src: slidePlaceholder(judul, n, 3), caption: 'Slot foto ' + n + ' — belum diisi' }));
+    return [1,2,3].map(n => ({ src: slidePlaceholder(judul, n, 3), caption: 'Slot foto ' + n + ' - belum diisi' }));
   }
 
   if (!proyek){
-    document.title = 'Proyek tidak ditemukan — Trecya Dewi Kusumaningrum';
+    document.title = 'Proyek tidak ditemukan - Trecya Dewi Kusumaningrum';
     isi.innerHTML = `<div class="wrap kosong">
         <h1>Proyek ini belum ada</h1>
         <p>Alamat yang dibuka tidak cocok dengan proyek mana pun.</p>
         <a href="index.html#proyek" class="nav-cta">Lihat semua proyek</a>
       </div>`;
   } else {
-    document.title = proyek.judul + ' — Trecya Dewi Kusumaningrum';
+    document.title = proyek.judul + ' - Trecya Dewi Kusumaningrum';
     document.getElementById('chromePill').textContent = 'trecyadewi.dev/proyek/' + proyek.id;
 
     const fotos = ambilFoto(proyek);
@@ -351,7 +351,7 @@
 
         <div class="proj-head">
           <div>
-            <p class="eyebrow">${proyek.nomor} — ${proyek.kategori}</p>
+            <p class="eyebrow">${proyek.nomor} - ${proyek.kategori}</p>
             <h1>${proyek.judul}</h1>
             <p class="tagline">${proyek.tagline}</p>
             <div class="tag-row">${proyek.tags.map(t=>`<span>${t}</span>`).join('')}</div>
@@ -373,7 +373,7 @@
             <div class="dots" id="dots">
               ${fotos.map((f,i)=>`<button data-ke="${i}" aria-label="Foto ${i+1}" ${i===0?'aria-current="true"':''}></button>`).join('')}
             </div>
-            <p class="gal-cap"><b id="galNo">01</b> / ${String(fotos.length).padStart(2,'0')} — <span id="galCap">${fotos[0].caption||''}</span></p>
+            <p class="gal-cap"><b id="galNo">01</b> / ${String(fotos.length).padStart(2,'0')} - <span id="galCap">${fotos[0].caption||''}</span></p>
           </div>
         </div>
 
@@ -396,7 +396,7 @@
               <div class="tautan">
                 ${proyek.tautan.map(l => (l.href && !l.segera)
                   ? `<a href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`
-                  : `<span class="segera">${l.label} — segera</span>`).join('')}
+                  : `<span class="segera">${l.label} - segera</span>`).join('')}
               </div>
             </div>
           </aside>
