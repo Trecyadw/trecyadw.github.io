@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trecya Dewi Kusumaningrum - Portofolio</title>
+<title>Trecya Dewi Kusumaningrum — Portofolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -222,6 +222,29 @@
   .cv-tombol svg{width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
   @media (max-width:560px){ .cv-tombol{width:100%; justify-content:center;} }
 
+
+  /* ---------- UNDUH APLIKASI ---------- */
+  .unduh-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px;}
+  .unduh-card{
+    display:flex; flex-direction:column; gap:16px;
+    background:var(--white); border:1px solid var(--line); border-radius:14px; padding:24px 26px;
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .unduh-card:hover{border-color:var(--rose); transform:translateY(-2px);}
+  .unduh-top{display:flex; align-items:flex-start; gap:16px;}
+  .unduh-top .cv-ikon{width:46px; height:46px;}
+  .unduh-top .cv-ikon svg{width:22px; height:22px;}
+  .unduh-nama{font-family:'Fraunces',serif; font-size:18px; font-weight:500; margin-bottom:4px;}
+  .unduh-info{font-size:13.5px; color:var(--ink-soft);}
+  .unduh-repo{
+    font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:.06em;
+    color:var(--sage); overflow-wrap:anywhere; margin-top:6px; display:block;
+  }
+  .unduh-aksi{display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:auto;}
+  .cv-tombol.nonaktif{background:var(--paper); color:var(--ink-soft); border:1px dashed var(--line); cursor:not-allowed; pointer-events:none;}
+  .cv-tombol.nonaktif:hover{transform:none; background:var(--paper);}
+  @media (max-width:760px){ .unduh-grid{grid-template-columns:1fr;} }
+
   /* ---------- DATA DIRI ---------- */
   .datadiri{
     margin-top:30px; border-top:1px solid var(--line); padding-top:24px;
@@ -418,7 +441,7 @@
     .hover-preview{display:block;}
   }
 
-  /* slider kecil di dalam baris - untuk layar sentuh / layar kecil */
+  /* slider kecil di dalam baris — untuk layar sentuh / layar kecil */
   .row-slider{
     display:none; position:relative; margin-top:16px; max-width:420px;
     aspect-ratio:16/9; overflow:hidden; border-radius:10px;
@@ -450,6 +473,7 @@
     <div class="navlinks">
       <a href="#tentang">Tentang</a>
       <a href="#proyek">Proyek</a>
+      <a href="#unduh">Unduh</a>
       <a href="#pengalaman">Pengalaman</a>
       <a href="#kontak">Kontak</a>
     </div>
@@ -465,7 +489,7 @@
       <p class="eyebrow">Portofolio</p>
       <p class="name-tag">Trecya Dewi Kusumaningrum</p>
       <h1>Membangun <em>produk digital</em> dari web sampai machine learning.</h1>
-      <p class="hero-sub">Lulusan Informatika Universitas Al Azhar Indonesia - mengerjakan website & mini game sebagai freelancer, dan meneliti pengenalan ucapan Bahasa Indonesia lewat deep learning.</p>
+      <p class="hero-sub">Lulusan Informatika Universitas Al Azhar Indonesia — mengerjakan website & mini game sebagai freelancer, dan meneliti pengenalan ucapan Bahasa Indonesia lewat deep learning.</p>
       <div class="hero-actions">
         <a href="mailto:trecyadewikusuman@gmail.com" class="btn-primary">Kirim Email
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -506,7 +530,7 @@
         <p class="eyebrow">Tentang Saya</p>
         <h2 style="font-size:34px; margin:16px 0 22px;">Belajar sistem lewat data, dan membangunnya lewat kode.</h2>
         <p>Saya lulusan Program Studi Informatika, Fakultas Sains dan Teknologi, Universitas Al Azhar Indonesia. Selama kuliah, saya mengerjakan proyek website dan mini game untuk klien freelance, sambil mendalami machine learning lewat riset tugas akhir tentang pengenalan ucapan otomatis (ASR) Bahasa Indonesia.</p>
-        <p>Saya juga aktif di organisasi kampus - Himpunan Mahasiswa Informatika (HMIF), Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi (BEM FST), beberapa kepanitiaan acara, serta UKM Tari Saman yang sudah beberapa kali menjadi juara di berbagai kompetisi.</p>
+        <p>Saya juga aktif di organisasi kampus — Himpunan Mahasiswa Informatika (HMIF), Badan Eksekutif Mahasiswa Fakultas Sains dan Teknologi (BEM FST), beberapa kepanitiaan acara, serta UKM Tari Saman yang sudah beberapa kali menjadi juara di berbagai kompetisi.</p>
         <div class="stat-grid">
           <div class="stat"><b>5</b><span>Proyek Ditampilkan</span></div>
           <div class="stat"><b>1</b><span>Riset Deep Learning</span></div>
@@ -552,11 +576,11 @@
         </div>
         <div class="org-item">
           <span class="dot"></span>
-          <div><b>UKM Tari Saman</b><span>Anggota aktif - kerap menjuarai kompetisi tari</span></div>
+          <div><b>UKM Tari Saman</b><span>Anggota aktif — kerap menjuarai kompetisi tari</span></div>
         </div>
         <div class="org-item">
           <span class="dot"></span>
-          <div><b>Tugas Akhir - S1 Informatika</b><span>Analisis Komparasi BiGRU & BiLSTM pada CRNN untuk ASR, 2026</span></div>
+          <div><b>Tugas Akhir — S1 Informatika</b><span>Analisis Komparasi BiGRU & BiLSTM pada CRNN untuk ASR, 2026</span></div>
         </div>
       </div>
     </div>
@@ -570,13 +594,13 @@
         <h2>Yang sudah<br>saya bangun.</h2>
       </div>
       <div class="head-kanan">
-        <p>Dari riset akademik sampai proyek pesanan klien - berikut beberapa yang paling mewakili cara saya bekerja.</p>
+        <p>Dari riset akademik sampai proyek pesanan klien — berikut beberapa yang paling mewakili cara saya bekerja.</p>
         <div class="riset-card">
           <div class="top-row">
             <span class="badge">TAHAP 3 · 1.514 SAMPEL</span>
             <span class="stars">★★★★★</span>
           </div>
-          <h4>Riset ASR - BiGRU vs BiLSTM</h4>
+          <h4>Riset ASR — BiGRU vs BiLSTM</h4>
           <div class="bar-row" style="--w:73.6%">
             <div class="lab"><b>BiLSTM</b><span>WER 26.36%</span></div>
             <div class="bar-track"><div class="bar-fill rose"></div></div>
@@ -603,7 +627,7 @@
       <a class="work-row" href="proyek.html?id=nr-order" data-proyek="nr-order">
         <span class="idx">02</span>
         <div class="info">
-          <h3>NR Order System - Marketplace Server Roleplay</h3>
+          <h3>NR Order System — Marketplace Server Roleplay</h3>
           <p>Sistem pemesanan barang untuk komunitas di server roleplay GTA V (FiveM): katalog berkategori dengan batas stok, status pesanan yang bisa dipantau anggota, dan panel admin untuk produk, pesanan, serta peran pengguna.</p>
           <div class="row-slider" data-slider="nr-order"></div>
         </div>
@@ -613,7 +637,7 @@
       <a class="work-row" href="proyek.html?id=flappy-ayang" data-proyek="flappy-ayang">
         <span class="idx">03</span>
         <div class="info">
-          <h3>Flappy Ayang - Mini Game</h3>
+          <h3>Flappy Ayang — Mini Game</h3>
           <p>Mini game satu tombol bergaya piksel: terbang menembus rintangan bernama LDR, Overthink, dan Waktu untuk mengumpulkan 23 hati. Dimainkan langsung dari browser, ponsel maupun komputer.</p>
           <div class="row-slider" data-slider="flappy-ayang"></div>
         </div>
@@ -623,8 +647,8 @@
       <a class="work-row" href="proyek.html?id=maze-ayang" data-proyek="maze-ayang">
         <span class="idx">04</span>
         <div class="info">
-          <h3>Maze Ayang - Mini Game Labirin</h3>
-          <p>Labirin piksel yang tata letaknya dirancang manual - menyusuri lorong, memungut bunga yang tersebar, sampai bertemu karakter yang menunggu di seberang peta.</p>
+          <h3>Maze Ayang — Mini Game Labirin</h3>
+          <p>Labirin piksel yang tata letaknya dirancang manual — menyusuri lorong, memungut bunga yang tersebar, sampai bertemu karakter yang menunggu di seberang peta.</p>
           <div class="row-slider" data-slider="maze-ayang"></div>
         </div>
         <span class="tags">Game Design · Level Design</span>
@@ -634,7 +658,7 @@
         <span class="idx">05</span>
         <div class="info">
           <h3>Website Portofolio Ini</h3>
-          <p>Halaman yang sedang kamu baca - dibangun sendiri dari nol tanpa framework, dengan isi seluruh proyek terpusat di satu berkas data agar mudah dirawat.</p>
+          <p>Halaman yang sedang kamu baca — dibangun sendiri dari nol tanpa framework, dengan isi seluruh proyek terpusat di satu berkas data agar mudah dirawat.</p>
           <div class="row-slider" data-slider="portofolio"></div>
         </div>
         <span class="tags">HTML · CSS · JavaScript</span>
@@ -643,7 +667,7 @@
       <a class="work-row" href="proyek.html?id=bipo" data-proyek="bipo">
         <span class="idx">06</span>
         <div class="info">
-          <h3>Bipo - Widget Desktop Robot Piksel</h3>
+          <h3>Bipo — Widget Desktop Robot Piksel</h3>
           <p>Widget desktop seukuran kartu nama berisi robot piksel yang ekspresinya mengikuti cuaca setempat dan kondisi baterai laptop, lengkap dengan jam dan tanggal.</p>
           <div class="row-slider" data-slider="bipo"></div>
         </div>
@@ -652,6 +676,18 @@
       </a>
     </div>
     <p class="reveal" style="margin-top:26px; font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--sage);">Klik satu baris proyek untuk membuka detailnya</p>
+  </section>
+
+  <!-- UNDUH APLIKASI -->
+  <section id="unduh" class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Unduh</p>
+        <h2>Aplikasi yang bisa<br>kamu unduh.</h2>
+      </div>
+      <p>Seluruh proyek saya publikasikan di GitHub. Klik tombol untuk mengunduh langsung ke perangkatmu.</p>
+    </div>
+    <div class="unduh-grid reveal" id="unduhGrid"></div>
   </section>
 
   <!-- SKILLS -->
@@ -672,7 +708,7 @@
       <div class="skill-card">
         <span class="num">/ 02</span>
         <h3>Machine Learning</h3>
-        <p>Merancang dan melatih model deep learning end-to-end - dari pra-pemrosesan data audio, arsitektur CRNN, hingga evaluasi dengan metrik WER dan CER.</p>
+        <p>Merancang dan melatih model deep learning end-to-end — dari pra-pemrosesan data audio, arsitektur CRNN, hingga evaluasi dengan metrik WER dan CER.</p>
       </div>
       <div class="skill-card">
         <span class="num">/ 03</span>
@@ -699,9 +735,9 @@
           <p>Berkontribusi selama kurang lebih 5 bulan. Tambahkan posisi/jabatan, periode kerja, dan tanggung jawab utamamu di sini agar lebih spesifik.</p>
         </div>
         <div class="t-item">
-          <span class="date">2020 - 2023</span>
+          <span class="date">2020 — 2023</span>
           <h3>Barista</h3>
-          <p>Lebih dari 2 tahun bekerja di industri kopi pada beberapa coffee shop di area Tangerang Selatan dan Jakarta Selatan - melayani pelanggan, mengoperasikan kasir dan pembayaran, serta bekerja dalam tim yang cepat dan padat.</p>
+          <p>Lebih dari 2 tahun bekerja di industri kopi pada beberapa coffee shop di area Tangerang Selatan dan Jakarta Selatan — melayani pelanggan, mengoperasikan kasir dan pembayaran, serta bekerja dalam tim yang cepat dan padat.</p>
         </div>
       </div>
       <details class="t-sub">
@@ -720,7 +756,7 @@
   <footer id="kontak" class="wrap">
     <div class="contact-cta reveal">
       <p class="eyebrow">Kontak</p>
-      <h2 style="margin-top:18px;">Terbuka untuk peluang magang<br>atau proyek baru -<br><a class="mail" href="mailto:trecyadewikusuman@gmail.com">trecyadewikusuman@gmail.com</a></h2>
+      <h2 style="margin-top:18px;">Terbuka untuk peluang magang<br>atau proyek baru —<br><a class="mail" href="mailto:trecyadewikusuman@gmail.com">trecyadewikusuman@gmail.com</a></h2>
       <div class="cv-card">
         <span class="cv-ikon"><svg viewBox="0 0 24 24"><path d="M14 2.5H7.5A2.5 2.5 0 0 0 5 5v14a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 19V7.5Z"/><path d="M14 2.5V7.5H19"/><path d="M8.5 13h7M8.5 17h4.5"/></svg></span>
         <div class="cv-teks">
@@ -834,7 +870,7 @@
     const fotos = ambilFoto(p);
     stage.innerHTML = fotos.map((f,i)=>
       `<img src="${f.src}" alt="Pratinjau ${p.judul}" data-judul="${p.judulPendek || p.judul}" onerror="fotoGagal(this)" class="${i===0?'show':''}">`).join('');
-    cap.textContent = (p.judulPendek || p.judul) + ' - ' + fotos.length + ' foto';
+    cap.textContent = (p.judulPendek || p.judul) + ' — ' + fotos.length + ' foto';
     let ke = 0;
     clearInterval(timerSlide);
     if (fotos.length > 1 && !hematGerak){
@@ -911,6 +947,34 @@
     }, {threshold:0.3});
     io.observe(box);
   });
+
+  // ---------- KARTU UNDUH APLIKASI (data dari data-proyek.js) ----------
+  (function(){
+    const grid = document.getElementById('unduhGrid');
+    if (!grid) return;
+    const IKON_UNDUH = '<svg viewBox="0 0 24 24"><path d="M12 3.5v11m0 0 4-4m-4 4-4-4"/><path d="M4 16.5v2A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5v-2"/></svg>';
+    const IKON_KOTAK = '<svg viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>';
+    const html = (window.DATA_PROYEK || []).filter(p => p.unduh).map(p => {
+      const d = window.infoUnduh(p);
+      const nama = p.judulPendek || p.judul;
+      const tombol = d.siap
+        ? `<a class="cv-tombol" href="${d.href}" rel="noopener" download>${IKON_UNDUH}${d.label}</a>
+           <a class="link-underline" href="${d.repoUrl}" target="_blank" rel="noopener">Lihat di GitHub</a>`
+        : `<span class="cv-tombol nonaktif" aria-disabled="true">Segera hadir</span>`;
+      return `<div class="unduh-card">
+        <div class="unduh-top">
+          <span class="cv-ikon">${IKON_KOTAK}</span>
+          <div>
+            <div class="unduh-nama">${nama}</div>
+            <p class="unduh-info">${d.info}</p>
+            ${d.siap ? `<span class="unduh-repo">github.com/${d.repo}</span>` : ''}
+          </div>
+        </div>
+        <div class="unduh-aksi">${tombol}</div>
+      </div>`;
+    }).join('');
+    grid.innerHTML = html;
+  })();
 </script>
 </body>
 </html>
